@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>java_web_test</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!--新建一个servlet -->
+	<servlet>
+		<servlet-name>CreateServlet01</servlet-name>
+		<servlet-class>com.ghd.servlet.createservlet.CreateServlet01</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateServlet01</servlet-name>
+		<url-pattern>/servlet/CreateServlet01</url-pattern>
+	</servlet-mapping>
+
+	<!--加载servlet配置的参数 -->
+	<servlet>
+		<servlet-name>ServletConfigDemo1</servlet-name>
+		<servlet-class>com.ghd.servlet.servletconfigdemo.ServletConfigDemo1</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>gacl</param-value>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>123</param-value>
+		</init-param>
+		<init-param>
+			<param-name>charset</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletConfigDemo1</servlet-name>
+		<url-pattern>/servlet/ServletConfigDemo1</url-pattern>
+	</servlet-mapping>
+
+	<!-- 多个Servlet通过ServletContext对象实现数据共享 -->
+	<servlet>
+		<servlet-name>ServletContextDemo1</servlet-name>
+		<servlet-class>com.ghd.servlet.servletcontextdemo.ServletContextDemo1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletContextDemo1</servlet-name>
+		<url-pattern>/servlet/ServletContextDemo1</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ServletContextDemo2</servlet-name>
+		<servlet-class>com.ghd.servlet.servletcontextdemo.ServletContextDemo2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletContextDemo2</servlet-name>
+		<url-pattern>/servlet/ServletContextDemo2</url-pattern>
+	</servlet-mapping>
+	<!-- 获取web应用的初始化参数 -->
+	<servlet>
+		<servlet-name>ServletContextDemo3</servlet-name>
+		<servlet-class>com.ghd.servlet.servletcontextdemo.ServletContextDemo3</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletContextDemo3</servlet-name>
+		<url-pattern>/servlet/ServletContextDemo3</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:mysql://localhost:3306/test</param-value>
+	</context-param>
+	<!-- 用servletContext实现请求转发 -->
+	<servlet>
+		<servlet-name>ForwardRequests01</servlet-name>
+		<servlet-class>com.ghd.servlet.servletcontextdemo.ForwardRequests01</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ForwardRequests01</servlet-name>
+		<url-pattern>/servlet/ForwardRequests01</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ForwardRequests02</servlet-name>
+		<servlet-class>com.ghd.servlet.servletcontextdemo.ForwardRequests02</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ForwardRequests02</servlet-name>
+		<url-pattern>/servlet/ForwardRequests02</url-pattern>
+	</servlet-mapping>
+	<!-- com.ghd.servlet.servletcontextdemo.ServletContextReadSource01
+	   读取配置文件
+	 -->
+	<servlet>
+		<servlet-name>ServletContextReadSource01</servlet-name>
+		<servlet-class>com.ghd.servlet.servletcontextdemo.ServletContextReadSource01</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletContextReadSource01</servlet-name>
+		<url-pattern>/servlet/ServletContextReadSource01</url-pattern>
+	</servlet-mapping>
+	<!--客户端缓存读取的内容  -->
+	<servlet>
+		<servlet-name>CacheResponse</servlet-name>
+		<servlet-class>com.ghd.servlet.servletcontextdemo.CacheResponse</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CacheResponse</servlet-name>
+		<url-pattern>/servlet/CacheResponse</url-pattern>
+	</servlet-mapping>
+	<!-- 向客户端写中文   用OutputStream-->
+	<servlet>
+		<servlet-name>ResponseChinese</servlet-name>
+		<servlet-class>com.ghd.servlet.response.ResponseChinese</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResponseChinese</servlet-name>
+		<url-pattern>/servlet/ResponseChinese</url-pattern>
+	</servlet-mapping>
+	<!-- 向客户端写中文   用PrintWriter-->
+	<servlet>
+		<servlet-name>ResponseChinese2</servlet-name>
+		<servlet-class>com.ghd.servlet.response.ResponseChinese2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResponseChinese2</servlet-name>
+		<url-pattern>/servlet/ResponseChinese2</url-pattern>
+	</servlet-mapping>
+	<!-- response实现下载-->
+	<servlet>
+		<servlet-name>FileDownload</servlet-name>
+		<servlet-class>com.ghd.servlet.filedownload.FileDownload</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FileDownload</servlet-name>
+		<url-pattern>/servlet/FileDownload</url-pattern>
+	</servlet-mapping>
+	<!-- response生成随机数的图片-->
+	<servlet>
+		<servlet-name>CreateAnImage</servlet-name>
+		<servlet-class>com.ghd.servlet.response.CreateAnImage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateAnImage</servlet-name>
+		<url-pattern>/servlet/CreateAnImage</url-pattern>
+	</servlet-mapping>
+</web-app>

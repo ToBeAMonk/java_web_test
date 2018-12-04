@@ -147,4 +147,67 @@
 		<servlet-name>CreateAnImage</servlet-name>
 		<url-pattern>/servlet/CreateAnImage</url-pattern>
 	</servlet-mapping>
+	<!-- BufferedImage生成验证图片-->
+	<servlet>
+		<servlet-name>DrawImage</servlet-name>
+		<servlet-class>com.ghd.servlet.bufferedImage.DrawImage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DrawImage</servlet-name>
+		<url-pattern>/servlet/DrawImage</url-pattern>
+	</servlet-mapping>
+	<!-- 验证BufferedImage生成验证图片-->
+	<servlet>
+		<servlet-name>CheckServlet</servlet-name>
+		<servlet-class>com.ghd.servlet.bufferedImage.CheckServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckServlet</servlet-name>
+		<url-pattern>/servlet/CheckServlet</url-pattern>
+	</servlet-mapping>
+	<!--request的一些get方法-->
+	<servlet>
+		<servlet-name>RequestGetMethod</servlet-name>
+		<servlet-class>com.ghd.servlet.request.RequestGetMethod</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RequestGetMethod</servlet-name>
+		<url-pattern>/servlet/RequestGetMethod</url-pattern>
+	</servlet-mapping>
+	<!--request的headers方法-->
+	<servlet>
+		<servlet-name>RequestHeaders</servlet-name>
+		<servlet-class>com.ghd.servlet.request.RequestHeaders</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RequestHeaders</servlet-name>
+		<url-pattern>/servlet/RequestHeaders</url-pattern>
+	</servlet-mapping>
+	<!--request获取jsp提交内容-->
+	<servlet>
+		<servlet-name>RequestDemo03</servlet-name>
+		<servlet-class>com.ghd.servlet.request.RequestDemo03</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RequestDemo03</servlet-name>
+		<url-pattern>/servlet/RequestDemo03</url-pattern>
+	</servlet-mapping>
+	<!-- com.ghd.servlet.cookie.GetTime获取用户上一次访问时间 -->
+	<servlet>
+		<servlet-name>GetTime</servlet-name>
+		<servlet-class>com.ghd.servlet.cookie.GetTime</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetTime</servlet-name>
+		<url-pattern>/servlet/GetTime</url-pattern>
+	</servlet-mapping>
+	<!-- com.ghd.servlet.cookie.DeleteCookie删除cookie-->
+	<servlet>
+		<servlet-name>DeleteCookie</servlet-name>
+		<servlet-class>com.ghd.servlet.cookie.DeleteCookie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteCookie</servlet-name>
+		<url-pattern>/servlet/DeleteCookie</url-pattern>
+	</servlet-mapping>
 </web-app>

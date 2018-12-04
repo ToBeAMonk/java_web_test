@@ -8,5 +8,17 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jetty-http-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jetty-io-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jetty-security-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jetty-server-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jetty-servlet-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jetty-servlets-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jetty-test-helper-4.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jetty-util-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jetty-webapp-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jetty-xml-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tools-1.8.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

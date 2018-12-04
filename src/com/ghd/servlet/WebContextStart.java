@@ -3,7 +3,7 @@ package com.ghd.servlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
-//这是用字节流
+//内嵌jetty，目前存在的问题是jsp无法正常访问，有待解决。
 public class WebContextStart {
 
 	public static void main(String[] args) {
